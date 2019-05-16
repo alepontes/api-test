@@ -14,7 +14,7 @@ Listar dados previamente cadastrados
 > O endpoint */create* foi introduzido para justificar o uso do banco, os dados são criados e salvos chamando essa rota
 
 
-## Rodando a API
+## Rodando a API 🚀
 Para rodar a API é necessario
 ```bash
 
