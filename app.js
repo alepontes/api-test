@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.get('/create', (req, res) => {
 
     const itens = []
-    let qtd = 100;
+    let qtd = 117;
 
 
     item.deleteMany({}, (err) => {
