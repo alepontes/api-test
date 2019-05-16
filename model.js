@@ -10,6 +10,9 @@ const ItemSchema = new Schema({
     },
     group: {
         type: String
+    },
+    image: {
+        type: String
     }
 });
 

@@ -32,7 +32,7 @@ app.get('/create', (req, res) => {
 
     item.deleteMany({}, (err) => {
         if (!err)
-            console.log('Dados Apagados')
+            return console.log('Dados Apagados')
         console.log('Erro ao Apagar Dados')
     })
 
@@ -41,6 +41,7 @@ app.get('/create', (req, res) => {
             name: faker.name.findName(),
             email: faker.internet.email(),
             group: Math.floor(1 + Math.random() * 4),
+            image: faker.image.avatar(),
         })
 
     item.create(itens, (err, resp) => {
