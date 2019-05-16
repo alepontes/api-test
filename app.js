@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', '*');
     res.setHeader('Access-Control-Allow-Origin', 'GET, POST, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.get('/create', (req, res) => {
 
     const itens = []
-    let qtd = 2;
+    let qtd = 100;
 
 
     item.deleteMany({}, (err) => {
@@ -42,13 +42,11 @@ app.get('/create', (req, res) => {
             group: Math.floor(1 + Math.random() * 4),
         })
 
-
     item.create(itens, (err, resp) => {
         if (!err)
             res
                 .status(210)
                 .json(resp)
-
     })
 
 
@@ -57,7 +55,6 @@ app.get('/create', (req, res) => {
 app.get('/list', (req, res) => {
 
     item.find({}, (err, itens) => {
-        console.log(itens)
         if (!err)
             res.json(itens)
     })
