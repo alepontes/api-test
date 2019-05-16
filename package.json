@@ -1,0 +1,9 @@
+{
+  "name": "lorem-api",
+  "version": "0.1.0",
+  "description": "Desc",
+  "main": "app.js",
+  "scripts": {},
+  "author": "alepontes",
+  "license": "ISC"
+}
