@@ -21,4 +21,153 @@ app.get('/', (req, res) => {
     res.json({ hello: 'world' });
 })
 
-//list
+app.get('/list', (req, res) => {
+
+    const itens = [
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "1"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "1"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "2"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "2"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "2"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "2"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "2"
+        },
+
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "3"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "3"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "3"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "3"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "3"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "3"
+        },
+
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        }
+        ,
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        },
+        {
+            "image": "",
+            "name": "Alexandre Pontes",
+            "email": "alexandrelopespontes@gmail.com",
+            "group": "4"
+        }
+    ]
+
+    console.log()
+    res.json(itens)
+
+})
