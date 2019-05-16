@@ -37,7 +37,7 @@ app.get('/create', (req, res) => {
 
     for (; qtd > 0; qtd--)
         itens.push({
-            nome: "Lorem Ipsum",
+            name: "Lorem Ipsum",
             email: "lorem@email.com",
             group: Math.floor(1 + Math.random() * 4),
         })
