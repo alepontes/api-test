@@ -25,14 +25,25 @@ app.get('/', (req, res) => {
 
 app.get('/create', (req, res) => {
 
-    const itemL = [{
-        nome: "Lorem Ipsum",
-        email: "lorem@email.com",
-        group: Math.floor(1 + Math.random() * 4),
-    }];
+    const itens = []
+    let qtd = 2;
 
 
-    item.create(itemL, (err, resp) => {
+    item.deleteMany({}, (err) => {
+        if (!err)
+            console.log('Dados Apagados')
+        console.log('Erro ao Apagar Dados')
+    })
+
+    for (; qtd > 0; qtd--)
+        itens.push({
+            nome: "Lorem Ipsum",
+            email: "lorem@email.com",
+            group: Math.floor(1 + Math.random() * 4),
+        })
+
+
+    item.create(itens, (err, resp) => {
         if (!err)
             res
                 .status(210)
@@ -41,166 +52,14 @@ app.get('/create', (req, res) => {
     })
 
 
-    // new item(item).save((err, resp) => {
-    //     if (!err)
-    //         res
-    //             .status(210)
-    //             .json({ lorem: "ipsum" })
-
-    // })
 })
 
 app.get('/list', (req, res) => {
-
-    const itens = [
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "1"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "1"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "2"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "2"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "2"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "2"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "2"
-        },
-
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "3"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "3"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "3"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "3"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "3"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "3"
-        },
-
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        }
-        ,
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        },
-        {
-            "image": "",
-            "name": "Alexandre Pontes",
-            "email": "alexandrelopespontes@gmail.com",
-            "group": "4"
-        }
-    ]
 
     item.find({}, (err, itens) => {
         console.log(itens)
         if (!err)
             res.json(itens)
     })
-
 
 })
