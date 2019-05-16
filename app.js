@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+var faker = require('faker');
 const port = 3001;// process.env.PORT
 const app = module.exports = express();
 
@@ -37,8 +38,8 @@ app.get('/create', (req, res) => {
 
     for (; qtd > 0; qtd--)
         itens.push({
-            name: "Lorem Ipsum",
-            email: "lorem@email.com",
+            name: faker.name.findName(),
+            email: faker.internet.email(),
             group: Math.floor(1 + Math.random() * 4),
         })
 
